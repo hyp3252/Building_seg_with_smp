@@ -40,3 +40,10 @@ https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDat
             in_channels=4,                  # model input channels (1 for gray-scale images, 3 for RGB, etc.)
             classes=7,)                      # model output channels (number of classes in your dataset)
 </pre>
+
+
+# 연구방향
+### 1. RGB image를 학습하여 test image로 mIoU 산출
+### 2. RGB + Edge image를 np.concatenate으로 4채널 input image를 생성하여 학습하여 test image로 mIoU 산출
+- test 코드에 사용할 모듈은 edge_utils에서
+### 3. 사용한 모델은 UNet-resnet50, UNet-resnet101, FPN-resnet50, FPN-resnet101, DeepLabV3+-resnet50, DeepLabV3+-resnet101
